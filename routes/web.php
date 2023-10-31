@@ -27,8 +27,18 @@ Route::get('/about', function () {
 });
 
 
+
+
 Route::get('/posts', function () {
+    $blog_posts = [
+        [
+            "title" => "Judul Post Pertama",
+            "author" => "Nizar",
+            "blog" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corrupti maxime, quibusdam quidem, non temporibus sint consequatur repellat assumenda laborum quasi explicabo officiis quis iusto? Odit doloremque aperiam neque nulla."
+        ],
+    ];
     return view('Posts', [
-        "title" => "Post"
+        "title" => "Post",
+        "posts" => $blog_posts
     ]);
 });
