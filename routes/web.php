@@ -19,16 +19,16 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('About', [
+        "title" => "About",
         "name" => "Nizar Alfattan",
         "email" => "nizargaming@iyeh.cc",
         "image" => "nizar.jpg"
     ]);
 });
 
-Route::get('/blog', function () {
-    return view('Blog');
-});
 
 Route::get('/posts', function () {
-    return view('Post');
+    return view('Posts', [
+        "title" => "Post"
+    ]);
 });
